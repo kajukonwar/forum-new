@@ -1,0 +1,29 @@
+{%extends "layouts/master.html" %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 mx-auto">
+			{{status|raw}}
+			<div class="card mt-5">
+				<div class="card-body">
+					<form action="#" method="POST">
+
+						<input type="hidden" name="login_csrf" value={{csrf}}>
+						<div class="form-group">
+
+							<input type="text" name="user_name" class="form-control" id="user_name" placeholder="Enter your user name">
+						</div>
+						<div class="form-group">
+							<input type="password" name="password" class="form-control" placeholder="Enter your password">
+						</div>
+
+						<button type="submit" class="btn btn-primary">Login</button>
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+{% endblock %}
